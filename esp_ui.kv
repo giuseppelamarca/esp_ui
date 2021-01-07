@@ -1,0 +1,165 @@
+#:kivy 2.0
+
+<Esp_ui>:
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            size_hint: 1, .8
+            orientation: 'horizontal'
+            BoxLayout:
+                size_hint: .2, 1
+                orientation: 'vertical'
+                Spinner:
+                    id: gpio_16
+                    text: ''
+                    values: 'GPIO16', 'WAKE'
+                Spinner:
+                    id: gpio_5
+                    text: ''
+                    values: 'GPIO5', 'SCL'
+                Spinner:
+                    id: gpio_4
+                    text: ''
+                    values: 'GPIO4', 'SDA'
+
+            Image:
+                size_hint: .6, 1
+                source: 'images/esp8266.jpeg'
+            BoxLayout:
+                orientation: 'horizontal'
+                size_hint: .2, 1
+                BoxLayout:
+                    orientation: 'vertical'
+                    Spinner:
+                        id: gpio_16
+                        text: ''
+                        values: '', 'GPIO16', 'WAKE'
+                        on_text: root.pin(self.text)
+                    Spinner:
+                        id: gpio_5
+                        text: ''
+                        values: '', 'GPIO5', 'SCL'
+                        on_text: root.pin(self.text)
+
+                    Spinner:
+                        id: gpio_4
+                        text: ''
+                        values: '', 'GPIO4', 'SDA'
+                        on_text: root.pin(self.text)
+                    Spinner:
+                        id: gpio_0
+                        text: ''
+                        values: '', 'GPIO0', 'FLASH'
+                        on_text: root.pin(self.text)
+                    Spinner:
+                        id: gpio_2
+                        text: ''
+                        values: '', 'GPIO2', 'TXD1'
+                        on_text: root.pin(self.text)
+                    Spinner:
+                        id: gpio_4
+                        text: ''
+                        values: '', 'GPIO4', 'SDA'
+                        on_text: root.pin(self.text)
+                    Spinner:
+                        id: gpio_16
+                        text: ''
+                        values: '', 'GPIO16', 'WAKE'
+                        on_text: root.pin(self.text)
+                    Spinner:
+                        id: gpio_14
+                        text: ''
+                        values: '', 'GPIO14', 'SCLK'
+                        on_text: root.pin(self.text)
+                    Spinner:
+                        id: gpio_12
+                        text: ''
+                        values: '', 'GPIO12', 'MISO'
+                        on_text: root.pin(self.text)
+                    Spinner:
+                        id: gpio_13
+                        text: ''
+                        values: '', 'GPIO13', 'MOSI', 'RXD2'
+                        on_text: root.pin(self.text)
+                    Spinner:
+                        id: gpio_15
+                        text: ''
+                        values: '', 'GPIO15', 'CS', 'TXD2'
+                        on_text: root.pin(self.text)
+                    Spinner:
+                        id: gpio_3
+                        text: ''
+                        values: '', 'GPIO3', 'RXD0'
+                        on_text: root.pin(self.text)
+
+                BoxLayout:
+                    orientation: 'vertical'
+                    Spinner:
+                        id: gpio_16_mode
+                        text: ''
+                        values: '', 'INPUT', 'OUTPUT'
+                        on_text: root.pin_mode(self.text)
+                    Spinner:
+                        id: gpio_5_mode
+                        text: ''
+                        values: '', 'INPUT', 'OUTPUT'
+                        on_text: root.pin_mode(self.text)
+                    Spinner:
+                        id: gpio_4_mode
+                        text: ''
+                        values: '', 'INPUT', 'OUTPUT'
+                        on_text: root.pin_mode(self.text)
+                    Spinner:
+                        id: gpio_0_mode
+                        text: ''
+                        values: '', 'INPUT', 'OUTPUT'
+                        on_text: root.pin_mode(self.text)
+                    Spinner:
+                        id: gpio_2_mode
+                        text: ''
+                        values: '', 'INPUT', 'OUTPUT'
+                        on_text: root.pin_mode(self.text)
+                    Spinner:
+                        id: gpio_4_mode
+                        text: ''
+                        values: '', 'INPUT', 'OUTPUT'
+                        on_text: root.pin_mode(self.text)
+                    Spinner:
+                        id: gpio_16_mode
+                        text: ''
+                        values: '', 'INPUT', 'OUTPUT'
+                        on_text: root.pin_mode(self.text)
+                    Spinner:
+                        id: gpio_14_mode
+                        text: ''
+                        values: '', 'INPUT', 'OUTPUT'
+                        on_text: root.pin_mode(self.text)
+                    Spinner:
+                        id: gpio_12_mode
+                        text: ''
+                        values: '', 'INPUT', 'OUTPUT'
+                        on_text: root.pin_mode(self.text)
+                    Spinner:
+                        id: gpio_13_mode
+                        text: ''
+                        values: '', 'INPUT', 'OUTPUT'
+                        on_text: root.pin_mode(self.text)
+                    Spinner:
+                        id: gpio_15_mode
+                        text: ''
+                        values: '', 'INPUT', 'OUTPUT'
+                        on_text: root.pin_mode(self.text)
+                    Spinner:
+                        id: gpio_3_mode
+                        text: ''
+                        values: '', 'INPUT', 'OUTPUT'
+                        on_text: root.pin_mode(self.text)
+
+        BoxLayout:
+            size_hint: 1, .2
+            Button:
+                text: "Generate"
+                on_press: root.generate()
+
+
+
